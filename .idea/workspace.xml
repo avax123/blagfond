@@ -2,11 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da205cbf-3445-4394-938c-3b63c5b60b6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/all-plugins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/blog-styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/fonts/Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/fonts/Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/fonts/Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/fonts/Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/fonts/Icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/other-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/other-style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/css/video-js.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_filipovskiy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_kashubskiy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Photo_kulichenko.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/Video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/about1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/about2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/about3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/about4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/about5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/about6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/banner-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/blog-det.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/blog1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/blog2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/blog3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/blog4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/donats.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/errror.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/expert8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/icon_externallink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/item1-m.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/item1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/item2-m.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/item2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/item3-m.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/item3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/peop1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/peop2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/peop3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/peop4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/photo_bckgrnd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/images/video2.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/js/all-plugins.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/js/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/js/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/dobrofond/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/dobrofond/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/dobrofond/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/dobrofond/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/dobrofond/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +111,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/dobrofond" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/dobrofond" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -51,7 +130,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581415414364</updated>
-      <workItem from="1581415415732" duration="3137000" />
+      <workItem from="1581415415732" duration="3228000" />
+      <workItem from="1581419604524" duration="1965000" />
+      <workItem from="1581421799356" duration="628000" />
+      <workItem from="1581433469465" duration="3063000" />
     </task>
     <servers />
   </component>
@@ -59,10 +141,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2663" y="275" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581417499062">
+    <state x="2663" y="275" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581434578166">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2663" y="275" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1010/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581417499062" />
+    <state x="2663" y="275" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1010/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581434578166" />
     <state x="2369" y="152" key="SettingsEditor" timestamp="1581419470489">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
