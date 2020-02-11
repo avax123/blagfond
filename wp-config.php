@@ -20,19 +20,19 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define( 'DB_NAME', 'database_name_here' );
+define( 'DB_NAME', 'blagfond' );
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'username_here' );
+define( 'DB_USER', 'root' );
 
 /** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', 'password_here' );
+define( 'DB_PASSWORD', '' );
 
 /** Имя сервера MySQL */
 define( 'DB_HOST', 'localhost' );
 
 /** Кодировка базы данных для создания таблиц. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** Схема сопоставления. Не меняйте, если не уверены. */
 define( 'DB_COLLATE', '' );
@@ -46,14 +46,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'впишите сюда уникальную фразу' );
-define( 'SECURE_AUTH_KEY',  'впишите сюда уникальную фразу' );
-define( 'LOGGED_IN_KEY',    'впишите сюда уникальную фразу' );
-define( 'NONCE_KEY',        'впишите сюда уникальную фразу' );
-define( 'AUTH_SALT',        'впишите сюда уникальную фразу' );
-define( 'SECURE_AUTH_SALT', 'впишите сюда уникальную фразу' );
-define( 'LOGGED_IN_SALT',   'впишите сюда уникальную фразу' );
-define( 'NONCE_SALT',       'впишите сюда уникальную фразу' );
+define( 'AUTH_KEY',         'B1MEC8A!A?%W^~[`5XycLICSC4L zvYAqLrn6][d5t~Yvf}>zXz}Dnzl9_~AY,`8' );
+define( 'SECURE_AUTH_KEY',  '54?rq[sen<f%hbe~y<KLbwKTje{l0T]Y2~asc}bL71RlT}]70Ouax]*8eO Od%gw' );
+define( 'LOGGED_IN_KEY',    '|Gbl<R ^5QJ@/h{tn{OB^C-3tu=R-XxRNwrP[EyWL>kQnMy+kjN7;X:>EV+ai7*{' );
+define( 'NONCE_KEY',        'Y(5~n!1x!H/p+~r?XGtaM|M42[,IlN(1*PS?S?%ZZW|y[]:vxCsfvs*[%z5{EJe:' );
+define( 'AUTH_SALT',        'T$ta;X&Lrh#C,]k{6k*!X&_X-u)4lzl,W2C^Znrliw.Ir_K`,q)*2}nhwvEo6HVC' );
+define( 'SECURE_AUTH_SALT', '6r}N|#&f|cnJFnwU*NXBW|A8+Gq-S:6x*w5aaF{WSm@:[Y1APY;_%R`x>anlk|WE' );
+define( 'LOGGED_IN_SALT',   '~,3NC6#f9q[Vmf/jcI9{0nOu_E(?bJxDQGpqz,g((f5(a%;xL_Z<m 6k[;v8`7|1' );
+define( 'NONCE_SALT',       'hG->ppc jP0+zl#Cg0_r&!++eSvPVJw R=3Vv>G,};BGC&m:uz%6oH+}>S.w>huk' );
 
 /**#@-*/
 
@@ -82,7 +82,7 @@ define( 'WP_DEBUG', false );
 
 /** Абсолютный путь к директории WordPress. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+    define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
 /** Инициализирует переменные WordPress и подключает файлы. */
