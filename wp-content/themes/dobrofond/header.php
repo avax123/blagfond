@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>Благотворительный фонд Путевка в жизнь</title>
+    <title><?php echo get_bloginfo( 'name' ); ?></title>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -112,3 +112,4 @@
                 <div class="mobile-nav-butt"><a class="btn btn--white" href="donats.html">Я хочу помочь</a></div>
             </div>
         </header>
+    </div>
