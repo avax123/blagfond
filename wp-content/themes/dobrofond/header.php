@@ -40,6 +40,7 @@
         gtag('config', 'UA-85037271-1');
     </script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/style.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/all-plugins.css' ?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link href="<?php echo get_stylesheet_directory_uri().'/css/video-js.css' ?>" rel="stylesheet">
@@ -56,15 +57,20 @@
                                 <li><a href="index.html">Стать стипендиатом</a></li>
                             </ul>
                             <ul class="header-nav">
-                                <li><a href="about-us.html">О благотворительном фонде</a></li>
-                                <li><a href="publik.pdf" target="_blank">Публичная отчетность</a></li>
-                                <li><a href="#">Блог фонда</a></li>
+                            <?php 
+                            wp_nav_menu( array( 
+                                'theme_location' => 'top-menu', 
+                                'container_class' => 'custom-menu-class' ) ); 
+                            ?>
                             </ul>
                         </div>
                         <div class="top-header__right">
                             <ul class="header-nav">
-                                <li><a class="phone-block" href="tel:+79858478945"><i class="icon-phone"></i>+7 (985) 847-89-45</a></li>
-                                <li><a href="contacts.html">Контакты и реквизиты</a></li>
+                            <?php 
+                            wp_nav_menu( array( 
+                                'theme_location' => 'top-right-menu', 
+                                'container_class' => 'custom-menu-class' ) ); 
+                            ?>
                             </ul>
                         </div>
                         <div class="mob-button"><span></span><span></span><span></span></div>
@@ -74,7 +80,7 @@
             <div class="middle-header">
                 <div class="container">
                     <div class="flex-wrap between-xs middle-xs">
-                        <div class="logo"><a href="index.html"><img src="images/logo.svg" alt=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/logo.svg" alt=""></a></div>
                         <a class="btn btn--white" href="donats.html">Я хочу помочь</a>
                     </div>
                 </div>
@@ -82,10 +88,13 @@
             <div class="bottom-header">
                 <div class="container">
                     <ul class="header-nav">
-                        <li><a href="index.html">Стать стипендиатом</a></li>
-                        <li><a href="stepend.html">Стипендиаты</a></li>
-                        <li><a href="smi.html">СМИ о стипендии</a></li>
-                        <li><a href="volonteri.html">Нам помогают</a></li>
+                    <?php 
+                    wp_nav_menu( 
+                        array( 
+                        'theme_location' => 'middle-menu', 
+                        )
+                    ); 
+                    ?>
                     </ul>
                 </div>
             </div>
@@ -94,22 +103,24 @@
                 <div class="mobile-nav-over">
                     <div class="mobile-nav-group">
                         <ul>
-                            <li><a href="about-us.html">О благотворительном фонде</a></li>
-                            <li><a href="publik.pdf" target="_blank">Публичная отчетность</a></li>
-                            <li><a href="#">Блог фонда</a></li>
-                            <li><a href="contacts.html">Контакты и реквизиты</a></li>
+                        <?php 
+                            wp_nav_menu( array( 
+                                'theme_location' => 'top-right-menu', 
+                                'container_class' => 'custom-menu-class' ) ); 
+                            ?>
                         </ul>
                     </div>
                     <div class="mobile-nav-group">
                         <ul>
-                            <li><a href="index.html">Стать стипендиатом</a></li>
-                            <li><a href="stepend.html">Стипендиаты</a></li>
-                            <li><a href="smi.html">СМИ о стипендии</a></li>
-                            <li><a href="volonteri.html">Нам помогают</a></li>
+                        <?php 
+                        wp_nav_menu( array( 
+                            'theme_location' => 'middle-menu', 
+                            'container_class' => 'custom-menu-class' ) ); 
+                        ?>
                         </ul>
                     </div>
                 </div>
                 <div class="mobile-nav-butt"><a class="btn btn--white" href="donats.html">Я хочу помочь</a></div>
             </div>
         </header>
-    </div>
+    <?php if(is_front_page() !== true) echo '</div>';?>

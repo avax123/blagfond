@@ -608,7 +608,7 @@ blockquote {
     bottom: 0;
     left: 0;
     background: #585D67;
-    opacity: 0.4;
+    opacity: 0.6;
     pointer-events: none; }
   .background-block .first-section {
     position: relative;
@@ -656,7 +656,9 @@ blockquote {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #4F331E; }
+  color: #4F331E;
+  width: 240px;
+}
 
 .item-block-icon {
   position: absolute;
