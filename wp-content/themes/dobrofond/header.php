@@ -40,14 +40,14 @@
         gtag('config', 'UA-85037271-1');
     </script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/style.css' ?>">
-    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused'  || get_the_category()[0]->slug == 'contacts_unused' || get_the_category()[0]->slug == 'donats_unused'|| get_the_category()[0]->slug == 'makedonat_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/all-plugins.css' ?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link href="<?php echo get_stylesheet_directory_uri().'/css/video-js.css' ?>" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
-    <div class="background-block">
+    <div class="background-block <?php if(get_the_category()[0]->slug == 'donats_unused') echo 'background-block--donats'?>">
         <header class="header">
             <div class="top-header">
                 <div class="container">
@@ -81,7 +81,7 @@
                 <div class="container">
                     <div class="flex-wrap between-xs middle-xs">
                         <div class="logo"><a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/logo.svg" alt=""></a></div>
-                        <a class="btn btn--white" href="donats.html">Я хочу помочь</a>
+                        <a class="btn btn--white" href="<?php echo get_permalink(get_posts_by_category('donats_unused','ASC', 'page')[0]->ID)?>"><?php echo get_posts_by_category('donats_unused','DESC', '')[0]->post_title;?></a>
                     </div>
                 </div>
             </div>
@@ -123,4 +123,4 @@
                 <div class="mobile-nav-butt"><a class="btn btn--white" href="donats.html">Я хочу помочь</a></div>
             </div>
         </header>
-    <?php if(is_front_page() !== true) echo '</div>';?>
+    <?php if(is_front_page() !== true && get_the_category()[0]->slug !== 'donats_unused') echo '</div>';?>

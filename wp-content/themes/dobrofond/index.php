@@ -13,6 +13,14 @@
         {
             get_template_part( 'template-parts/content/contacts' );
         }
+        if(get_the_category()[0]->slug == 'donats_unused')
+        {
+            get_template_part( 'template-parts/content/donats' );
+        }
+        if(get_the_category()[0]->slug == 'makedonat_unused')
+        {
+            get_template_part( 'template-parts/content/makedonats' );
+        }
         if(get_the_category()[0]->slug == 'volonteri_unused')
         {
             get_template_part( 'template-parts/content/volonteri' );

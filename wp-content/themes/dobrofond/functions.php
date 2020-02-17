@@ -13,7 +13,7 @@ function wpb_custom_new_menu() {
 
   function filter_nav_menu_items($menu){
     $post_type = ($menu->object); //gets post type
-    if(strpos($menu->title,'+') !== false) {
+    if(strpos($menu->title,'+') !== false && strpos($menu->title,'icon-phone') == false) {
         $menu->title = '<i class="icon-phone"></i>'. $menu->title;
     }
 
@@ -51,7 +51,7 @@ function get_slider_posts($post_id)
     return $posts_array;
 }
 
-function get_posts_by_category($category)
+function get_posts_by_category($category, $order = 'DESC', $post_type = 'post')
 {
     $term = get_terms( 'category', array( 'name__like' => $category ) );
 
@@ -61,12 +61,12 @@ function get_posts_by_category($category)
         'cat'              => $term[0]->term_id,
         'category_name'    => '',
         'orderby'          => 'date',
-        'order'            => 'DESC',
+        'order'            => $order,
         'include'          => '',
         'exclude'          => '',
         'meta_key'         => '',
         'meta_value'       => '',
-        'post_type'        => 'post',
+        'post_type'        => $post_type,
         'post_mime_type'   => '',
         'post_parent'      => '',
         'author'	   => '',
