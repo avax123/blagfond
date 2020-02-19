@@ -15,17 +15,17 @@
             </div>
             <div class="col-sm-6 col-xs-12">
               <div class="donats-block"><b>Помоги делом</b>
-                <p><?php echo get_field('pomogi_delom_tekst'); ?></p><a class="btn" href="help-them.html">Участвовать</a>
+                <p><?php echo get_field('pomogi_delom_tekst'); ?></p><a class="btn" href="<?php echo get_permalink(get_posts_by_category('help_them_unused','ASC', 'page')[0]->ID)?>">Участвовать</a>
               </div>
             </div>
             <div class="col-sm-6 col-xs-12">
               <div class="donats-block"><b>Расскажи друзьям</b>
-                <p><?php echo get_field('rasskazhi_druzjam_tekst'); ?></p><a class="btn" href="share-people.html">Рассказать</a>
+                <p><?php echo get_field('rasskazhi_druzjam_tekst'); ?></p><a class="btn" href="<?php echo get_permalink(get_posts_by_category('share_unused','ASC', 'page')[0]->ID)?>">Рассказать</a>
               </div>
             </div>
             <div class="col-sm-6 col-xs-12">
               <div class="donats-block"><b>Размести баннер</b>
-                <p><?php echo get_field('razmesti_banner_tekst'); ?></p><a class="btn" href="add-banner.html">Разместить</a>
+                <p><?php echo get_field('razmesti_banner_tekst'); ?></p><a class="btn" href="<?php echo get_permalink(get_posts_by_category('banner_unused','ASC', 'page')[0]->ID)?>">Разместить</a>
               </div>
             </div>
           </div>

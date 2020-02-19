@@ -25,6 +25,18 @@
         {
             get_template_part( 'template-parts/content/volonteri' );
         }
+        if(get_the_category()[0]->slug == 'help_them_unused')
+        {
+            get_template_part( 'template-parts/content/help_them' );
+        }
+        if(get_the_category()[0]->slug == 'share_unused')
+        {
+            get_template_part( 'template-parts/content/share' );
+        }
+        if(get_the_category()[0]->slug == 'banner_unused')
+        {
+            get_template_part( 'template-parts/content/banner' );
+        }
         get_template_part( 'template-parts/content/content' );
     }
     elseif(is_home())

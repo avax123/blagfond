@@ -40,7 +40,7 @@
         gtag('config', 'UA-85037271-1');
     </script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/style.css' ?>">
-    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused'  || get_the_category()[0]->slug == 'contacts_unused' || get_the_category()[0]->slug == 'donats_unused'|| get_the_category()[0]->slug == 'makedonat_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused'  || get_the_category()[0]->slug == 'contacts_unused' || get_the_category()[0]->slug == 'donats_unused'|| get_the_category()[0]->slug == 'makedonat_unused' || get_the_category()[0]->slug == 'help_them_unused' || get_the_category()[0]->slug == 'share_unused' || get_the_category()[0]->slug == 'banner_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/all-plugins.css' ?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link href="<?php echo get_stylesheet_directory_uri().'/css/video-js.css' ?>" rel="stylesheet">
