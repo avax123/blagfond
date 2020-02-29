@@ -5,6 +5,18 @@
         get_template_part( 'template-parts/content/main_page' );
     }
     elseif ( is_singular() ) {
+        if(get_the_category()[0]->slug == 'smi_unused')
+        {
+            get_template_part( 'template-parts/content/smi' );
+        }
+        if(get_the_category()[0]->slug == 'program_form_unused')
+        {
+            get_template_part( 'template-parts/content/form_program' );
+        }
+        if(get_the_category()[0]->slug == 'program_unused')
+        {
+            get_template_part( 'template-parts/content/program' );
+        }
         if(get_the_category()[0]->slug == 'about_us_unused')
         {
             get_template_part( 'template-parts/content/about_us' );

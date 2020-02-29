@@ -79,3 +79,87 @@ function get_posts_by_category($category, $order = 'DESC', $post_type = 'post')
     
     return $posts_array;
 }
+
+add_theme_support( 'custom-logo' );
+
+function themename_custom_logo_setup() {
+    $defaults = array(
+    'flex-height' => true,
+    'flex-width'  => true,
+    'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+   }
+   add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
+   function my_upload_size_limit( $limit ) {
+    add_filter( 'upload_size_limit', 'my_upload_size_limit' );
+        return wp_convert_hr_to_bytes( '5M' );
+    }
+
+    add_action( 'admin_post_save_form', 'lunchbox_generate_orders_csv' );
+    function lunchbox_generate_orders_csv() {
+        if (isset($_POST['submit'])) {
+            $math          = $_POST['math'] ?: '';
+            $chemistry     = $_POST['chemistry'] ? ', '.$_POST['chemistry'] : '';
+            $other_profile = $_POST['other_profile'] ? ', '.$_POST['other_profile'] : '';
+        
+            $message = '<strong>'.'Контактные данные'.'</strong>'.'<br/>'.
+                       'Телефон: '.$_POST['phone'].'<br/>'.
+                       'E-mail: '.$_POST['email'].'<br/>'.'<br/>'.
+                       '<strong>'.'Данные ребенка'.'</strong>'.'<br/>'.
+                       'Имя ребенка: '.$_POST['name'].'<br/>'.
+                       'Дата рождения: '.$_POST['birthday'].'<br/>'.
+                       'Населенный пункт проживания: '.$_POST['city'].'<br/>'.
+                       'Профиль образования: '.$math.$chemistry.$other_profile.'<br/>'.
+                       '<strong>'.'Успеваемость в школе'.'</strong>'.'<br/>'.
+                       'Средний балл по всем предметам: '.$_POST['avg-grade'].'<br/>'.
+                       'По математике: '.$_POST['math-grade'].'<br/>'.
+                       'По физике: '.$_POST['physics-grade'].'<br/>'.
+                       'По биологии: '.$_POST['biology-grade'].'<br/>'.
+                       'По химии: '.$_POST['chemistry-grade'].'<br/>'.'<br/>'.
+                       '<strong>'.'Финансовое состояние семьи'.'</strong>'.'<br/>'.
+                       'Совокупный доход родителей в рублях: '.$_POST['revenue'].'<br/>'.
+                       'Количество членов семьи проживающих вместе: '.$_POST['relatives-number'].'<br/>'.'<br/>'.
+                       'Ознакомлен с Соглашением: '.$_POST['agree'];
+        
+            $to      = 'mkdr1488@gmail.com';
+            $subject = "Заявка на участие в программе «Поддержи таланты»";
+            $headers = 'From: sergey.petrov.a@gmail.com'."\r\n".
+                       'Content-type: text/html; charset="utf-8"'."\r\n".
+                       'Date: '.date('D, d M Y h:i:s O')."\r\n";
+        
+            $test = mail($to, $subject, $message, $headers);
+            if ($test) {
+                get_header(); 
+                get_template_part( 'template-parts/content/form_success' );
+                get_footer();
+                exit();
+            }
+        } else {
+            echo 'Error: Wrong data';
+        }
+    }
+
+    add_action( 'admin_post_save_form_help_themn', 'lunchbox_generate_orders_csv_help_them' );
+    function lunchbox_generate_orders_csv_help_them() {
+        $message = '<strong>'.'Контактные данные'.'</strong>'.'<br/>'.
+        'Телефон: '.$_POST['contact'].'<br/>'.
+        'Имя: '.$_POST['fio'].'<br/>'.
+
+        $to      = 'mkdr1488@gmail.com';
+        $subject = "Заявка 'Помоги делом'";
+        $headers = 'From: sergey.petrov.a@gmail.com'."\r\n".
+                'Content-type: text/html; charset="utf-8"'."\r\n".
+                'Date: '.date('D, d M Y h:i:s O')."\r\n";
+
+        $test = mail($to, $subject, $message, $headers);
+        if ($test) {
+        get_header(); 
+        get_template_part( 'template-parts/content/form_success' );
+        get_footer();
+        exit();
+        } else {
+        echo 'Error: Wrong data';
+        }
+    }

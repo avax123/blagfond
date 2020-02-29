@@ -10,6 +10,7 @@
             <div class="make-donat_right">
               <div class="form-section">
                 <form class="form js_validate" action="form-help.php" method="post">
+                <input type="hidden" name="action" value="save_form_help_themn">
                   <div class="form-head">Ваши контактные данные</div>
                   <div class="input-field input-field--donat required-field" data-error="Заполните поле"><span class="label">Ваше имя</span>
                     <input name="fio" type="text" placeholder="Введите ваше имя" required>

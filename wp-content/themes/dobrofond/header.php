@@ -39,13 +39,13 @@
         gtag('js', new Date());
         gtag('config', 'UA-85037271-1');
     </script>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/style.css' ?>">
-    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused'  || get_the_category()[0]->slug == 'contacts_unused' || get_the_category()[0]->slug == 'donats_unused'|| get_the_category()[0]->slug == 'makedonat_unused' || get_the_category()[0]->slug == 'help_them_unused' || get_the_category()[0]->slug == 'share_unused' || get_the_category()[0]->slug == 'banner_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/all-plugins.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri().'/css/style.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php if (has_category('Стипендиаты') || is_home() || get_the_category()[0]->slug == 'volonteri_unused' || get_the_category()[0]->slug == 'about_us_unused'  || get_the_category()[0]->slug == 'contacts_unused' || get_the_category()[0]->slug == 'donats_unused'|| get_the_category()[0]->slug == 'makedonat_unused' || get_the_category()[0]->slug == 'help_them_unused' || get_the_category()[0]->slug == 'share_unused' || get_the_category()[0]->slug == 'banner_unused' || get_the_category()[0]->slug == 'program_form_unused' || get_the_category()[0]->slug == 'smi_unused') echo get_stylesheet_directory_uri().'/css/other-style.css' ?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link href="<?php echo get_stylesheet_directory_uri().'/css/video-js.css' ?>" rel="stylesheet">
 </head>
-<body>
+<body <?php if(get_the_category()[0]->slug == 'program_form_unused') echo 'class="inner-page page-h"'?>>
 <div class="wrapper">
     <div class="background-block <?php if(get_the_category()[0]->slug == 'donats_unused') echo 'background-block--donats'?>">
         <header class="header">
@@ -80,7 +80,11 @@
             <div class="middle-header">
                 <div class="container">
                     <div class="flex-wrap between-xs middle-xs">
-                        <div class="logo"><a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/logo.svg" alt=""></a></div>
+                    <?php 
+                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                ?>
+                <div class="logo"><a href="/"><img src="<?php echo $logo[0]?>" alt=""></a></div>
                         <a class="btn btn--white" href="<?php echo get_permalink(get_posts_by_category('donats_unused','ASC', 'page')[0]->ID)?>"><?php echo get_posts_by_category('donats_unused','DESC', '')[0]->post_title;?></a>
                     </div>
                 </div>

@@ -5,7 +5,6 @@
           </div>
         </div>
       </div>
-</div>
       <div class="container">
         <div class="items-section">
           <div class="row">
@@ -50,7 +49,7 @@
               <div class="plan-item__info"><?php echo get_field_object('third_under_middle_h1_block')['value']; ?></div>
             </div>
           </div>
-          <div class="align-center"><a class="btn" href="program.html">Узнай как стать стипендиатом</a></div>
+          <div class="align-center"><a class="btn" href="/programma/">Узнай как стать стипендиатом</a></div>
         </div>
         <div class="slider-section">
           <div class="heading-section heading-section--slider"> Ваш ребенок будет учиться в ведущем ВУЗе
@@ -80,52 +79,40 @@
         endforeach;
         ?>
         </div>
-        
+        </div>
         <div class="video-section">
           <div class="video-section-left">
-            <div class="heading-section">История Никиты</div>
-            <div class="video-info">Как Никита стал стипендиатом фонда</div><a class="btn" href="program.html">Узнай как стать стипендиатом</a>
+            <div class="heading-section"><?php wp_reset_query(); echo get_field('hist_title'); ?></div>
+            <div class="video-info"><?php echo get_field('short_hist_descr'); ?></div><a class="btn" href="/programma/">Узнай как стать стипендиатом</a>
           </div>
           <div class="video-section-right responsive-video">
             <video class="video-js" id="my-video" controls="" preload="auto" width="780" height="440" poster="<?php echo get_template_directory_uri();?>/images/Video.jpg" data-setup="{}">
-              <source src="<?php echo get_template_directory_uri();?>/images/video.mp4" type="video/mp4">
+              <source src="<?php echo get_field('hist_video'); ?>" type="video/mp4">
               <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-            </video><a class="btn" href="program.html">Узнай как стать стипендиатом</a>
+            </video><a class="btn" href="/programma/">Узнай как стать стипендиатом</a>
           </div>
         </div>
       </div>
       <div class="why-we-section">
         <div class="container">
-          <div class="heading-section">Почему благотворительный фонд помогает талантливым детям</div>
+          <div class="heading-section"><?php echo get_field('why_we_title'); ?></div>
           <div class="why-we-info flex-wrap between-xs">
-            <div class="why-we-left">Благотворительный фонд «Путевка в жизнь» — это сообщество неравнодушных людей, которым в свое время добиться успеха помогли совершенно бескорыстно. У каждого из нас своя история, но всем из нас была необходима поддержка, и мы ее вовремя получили. Вот почему сегодня мы хотим помочь молодым талантливым ребятам получить образование — необходимое условие для развития своего потенциала. Для того, чтобы наша помощь была регулярной и системной, мы и создали наш Благотворительный фонд.</div>
-            <div class="why-we-right">Наш Фонд финансируется исключительно за счет взносов учредителей, а также пожертвований от физических и юридических лиц. Цель нашего Фонда —  благотворительная деятельность, направленная на поддержку и развитие талантливых детей.</div>
+            <div class="why-we-left"><?php echo get_field('why_we_descr'); ?></div>
+            <div class="why-we-right"><?php echo get_field('why_we_short_descr_right'); ?></div>
           </div>
           <div class="peop-list">
+          <?php 
+            foreach(get_posts_by_category('Учредители', 'ASC') as $post_simple):
+            ?>
             <div class="peop-item">
-              <div class="peop-image"><img src="<?php echo get_template_directory_uri();?>/images/Photo_kashubskiy.jpg" alt=""></div>
-              <div class="peop-info">
-                <div class="peop-name">Андрей Кашубский</div>
-                <div class="peop-job">Частный инвестор</div>
-                <p>«Сначала мне повезло — в советское время образование было бесплатным. Так что мой первый диплом достался мне совершенно бесплатно, даже стипендию платили. Потом, когда пришло время поучиться в платных ВУЗах на Западе, в самые важные моменты мне помогали — я дважды получал гранты и стипендии от фондов. А сейчас пришло время, когда помочь могу я сам, и охотно делаю это. Надеюсь, и наши студенты в будущем передадут эту эстафетную палочку помощи следующим поколениям!»</p>
-              </div>
-            </div>
-            <div class="peop-item">
-              <div class="peop-image"><img src="<?php echo get_template_directory_uri();?>/images/Photo_kulichenko.jpg" alt=""></div>
-              <div class="peop-info">
-                <div class="peop-name">Алексей Куличенко</div>
-                <div class="peop-job">Зам. генерального директора по финансам и экономике АО «Северсталь Менеджмент»</div>
-                <p>«Работающие социальные лифты – критичный фактор долгосрочного и успешного развития любого общества, а доступ к хорошему образованию — важный элемент этого процесса. Надеюсь, что наш проект будет хорошей возможностью и поддержкой для амбициозных, любознательных, желающих расти и развиваться ребят, поможет им в самореализации и старте их профессионального жизненного пути.»</p>
-              </div>
-            </div>
-            <div class="peop-item">
-              <div class="peop-image"><img src="<?php echo get_template_directory_uri();?>/images/Photo_filipovskiy.jpg" alt=""></div>
-              <div class="peop-info">
-                <div class="peop-name">Алексей Филипповский</div>
-                <div class="peop-job">Заместитель генерального директора по экономике и финансам АК"АЛРОСА" (ПАО)</div>
-                <p>«В России сегодня есть много благотворительных организаций, ориентированных на помощь слабым. Идея нашего фонда заключается в помощи сильным!  А именно, в оказании содействия талантливым, амбициозным и серьезно относящихся к своему будущему старшеклассникам, которые не имеют возможности без нашей помощи поступить в ВУЗ.  Надеюсь и верю, что наше участие поможет им состояться в этой жизни, раскрыть свой потенциал и принести пользу стране и обществу.»</p>
-              </div>
-            </div>
+                  <div class="peop-image"><img src="<?php echo get_field('avatar_founders', $post_simple->ID) ?>" alt=""></div>
+                  <div class="peop-info">
+                    <div class="peop-name"><?php echo get_field('name_founders', $post_simple->ID) ?></div>
+                    <div class="peop-job"><?php echo get_field('wps_founders', $post_simple->ID) ?></div>
+                    <p><?php echo get_field('description_founders', $post_simple->ID) ?></p>
+                  </div>
+                </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>

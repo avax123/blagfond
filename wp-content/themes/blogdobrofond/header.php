@@ -46,7 +46,11 @@
           <div class="middle-header">
             <div class="container">
               <div class="flex-wrap between-xs middle-xs">
-                <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div><a class="btn btn--white" href="#">Я хочу помочь</a>
+                <?php 
+                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                ?>
+                <div class="logo"><a href="#"><img src="<?php echo $logo[0]?>" alt=""></a></div><a class="btn btn--white" href="#">Я хочу помочь</a>
               </div>
             </div>
           </div>

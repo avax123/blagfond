@@ -11,7 +11,7 @@
     </div>
 </footer>
 <script src="<?php echo get_stylesheet_directory_uri().'/js/all-plugins.min.js' ?>"></script>
-<script src="<?php echo get_stylesheet_directory_uri().'/js/main.js' ?>">
+<script src="<?php echo get_stylesheet_directory_uri().'/js/main.js' ?>"></script>
 </div>
 <script src="<?php echo get_stylesheet_directory_uri().'/js/video.js' ?>"></script>
 </body>
